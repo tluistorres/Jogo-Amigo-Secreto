@@ -29,4 +29,4 @@ Este projeto é de código aberto e pode ser utilizado livremente.
 
 ## Contato
 Para dúvidas ou sugestões, entre em contato comigo através do meu e-mail: ## Contato
-Para dúvidas ou sugestões, entre em contato comigo através do meu e-mail: [luistorres090165@exemplo.com](mailto:luistorres090165@exemplo.com).
+Para dúvidas ou sugestões, entre em contato comigo através do meu e-mail: [luistorres090165@gmail.com](mailto:luistorres090165@gmail.com).

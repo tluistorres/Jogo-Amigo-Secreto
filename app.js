@@ -1,6 +1,6 @@
 //O principal objetivo deste desafio é fortalecer suas habilidades em lógica de programação. Aqui você deverá desenvolver a lógica para resolver o problema.
 
-const amigosOriginais = ['Livia', 'Louise', 'Lucas', 'Quiteria', 'Luis']; 
+const amigosOriginais = [];
 const amigos = []; // Começa com a lista vazia
 const eAmigoInput = document.querySelector("#amigo");
 const eBotaoAdicionar = document.getElementById('adicionarNome');
@@ -9,13 +9,12 @@ const eBotaoSortear = document.getElementById('sortearAmigo');
 const eAmigoResultado = document.querySelector("#resultado");
 const eBotaoLimpar = document.querySelector("#limparLista");
 
-eBotaoLimpar.onclick = limparLista; 
+eBotaoLimpar.onclick = limparLista;
 eBotaoSortear.addEventListener('click', sortearAmigo);
 eBotaoAdicionar.addEventListener('click', adicionarAmigo);
 
 function adicionarAmigo() {
   const amigo = eAmigoInput.value.trim();
-
   const mensagemErro = validarAmigo(amigo);
   if (mensagemErro) {
     mostrarMensagemErro(mensagemErro);
@@ -30,15 +29,9 @@ function validarAmigo(amigo) {
   if (amigo.length < 3) {
     return "O nome do amigo deve ter pelo menos 3 caracteres";
   }
-
-  if (!amigosOriginais.includes(amigo)) {
-    return "O nome deve estar na lista original de amigos";
-  }
-
   if (amigos.includes(amigo)) {
     return "Amigo já adicionado";
   }
-
   return null; // Retorna null se não houver erro
 }
 
@@ -54,9 +47,9 @@ function sortearAmigo() {
   const randIndex = Math.floor(Math.random() * amigos.length);
   const resultadoAmigo = amigos[randIndex]; // Seleciona um amigo aleatório
   const resultadoMessage = `<span style="color: #05DF05; font-weight: bold;">Parabéns! O sorteado foi ${resultadoAmigo}.</span>`; // Mensagem de resultado
-  
   eAmigoResultado.innerHTML = resultadoMessage; // Exibe o resultado na tela com HTML
 }
+
 // Funções auxiliares
 function limparLista() {
   amigos.length = 0; // Limpa o array de amigos

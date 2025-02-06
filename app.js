@@ -1,5 +1,3 @@
-//O principal objetivo deste desafio é fortalecer suas habilidades em lógica de programação. Aqui você deverá desenvolver a lógica para resolver o problema.
-
 const amigosOriginais = [];
 const amigos = []; // Começa com a lista vazia
 const eAmigoInput = document.querySelector("#amigo");
@@ -48,6 +46,15 @@ function sortearAmigo() {
   const resultadoAmigo = amigos[randIndex]; // Seleciona um amigo aleatório
   const resultadoMessage = `<span style="color: #05DF05; font-weight: bold;">Parabéns! O sorteado foi ${resultadoAmigo}.</span>`; // Mensagem de resultado
   eAmigoResultado.innerHTML = resultadoMessage; // Exibe o resultado na tela com HTML
+
+  // Adiciona um atraso antes de mostrar os confetes
+  setTimeout(() => {
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 }
+    });
+  }, 1000); // Atraso de 1000 milissegundos (1 segundo)
 }
 
 // Funções auxiliares

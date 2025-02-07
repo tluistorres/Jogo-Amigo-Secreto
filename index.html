@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <title>Amigo Secreto</title>
-    </head>
+</head>
 <body>
     <main class="main-content">
         <header class="header-banner">
@@ -19,7 +19,10 @@
             <h2 class="section-title">Digite o nome dos seus amigos</h2>
             <div class="input-wrapper">
                 <input type="text" id="amigo" class="input-name" placeholder="Digite um nome">
-                <button id="adicionarNome" class="button-add">Adicionar</button>
+                <button id="adicionarNome" class="button-add">
+                    <img src="assets/play_circle_outline.png" alt="Ícone para adicionar" style="margin-right: 8px;">
+                    Adicionar
+                </button>
                 <ul id="listaNomes"></ul>
             </div>
             <div class="button-container">
@@ -27,7 +30,10 @@
                     <img src="assets/play_circle_outline.png" alt="Ícone para sortear">
                     Amigo Secreto
                 </button>     
-                <button id="limparLista">Limpar Lista</button>
+                <button id="limparLista" class="button-draw"> <!-- Usando a mesma classe aqui -->
+                    <img src="assets/play_circle_outline.png" alt="Ícone para limpar lista" style="margin-right: 8px;">
+                    Limpar Lista
+                </button>
                 <div id="resultado"></div>
             </div>   
         </section>

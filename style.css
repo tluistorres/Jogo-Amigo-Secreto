@@ -3,7 +3,8 @@
     --color-secondary: #FFF9EB;
     --color-tertiary: #C4C4C4;
     --color-button: #fe652b;
-    --color-button-hover: #fe652b;
+    --color-button-hover: #fe652b; /* Esta pode ser mantida ou alterada */
+    --color-button-hover-green: #28a745; /* Adicionada a cor verde */
     --color-text: #444444;
     --color-white: #FFFFFF;
 }
@@ -96,6 +97,7 @@ body {
 .button-container button {
     margin: 0 10px; /* Adiciona um espaço entre os botões, se houver mais de um */
 }
+
 /* Estilos de entrada de texto */
 .input-title {
     flex: 1;
@@ -124,7 +126,10 @@ button {
     color: var(--color-text);
     border-radius: 0 25px 25px 0;
 }
-
+.button-add img {
+    width: 20px; /* Ajuste conforme necessário */
+    height: 20px; /* Ajuste conforme necessário */
+}
 .button-add:hover {
     background-color: var(--color-button);
     color: #FFFFFF;
@@ -148,18 +153,13 @@ ul {
     background-color: var(--color-button);
     font-size: 16px;
 }
-
+.button-draw:hover {
+    background-color: var(--color-button-hover-green); /* Cor verde ao passar o mouse */
+    color: #FFFFFF; /* Cor do texto ao passar o mouse */
+}
 .main-content .result-list {
     margin-top: 15px;
     color: #05DF05;
     font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-}
-.button-draw img {
-    margin-right: 40px;
-}
-
-.button-draw:hover {
-    background-color: var(--color-button-hover);
+    font-weight: bold; /* Adicionei o valor 'bold' aqui */
 }

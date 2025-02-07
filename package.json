@@ -1,0 +1,23 @@
+{
+  "name": "jogo-amigo-secreto",
+  "version": "1.0.0",
+  "description": "\"Desenvolvi uma aplicação web estática, utilizando HTML, CSS e JavaScript, com o objetivo de fortalecer habilidades iniciais em lógica de programação. Essa aplicação permite que os usuários criem uma lista de amigos para realizar um sorteio aleatório de um jogo de amigo secreto.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tluistorres/Jogo-Amigo-Secreto.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tluistorres/Jogo-Amigo-Secreto/issues"
+  },
+  "homepage": "https://github.com/tluistorres/Jogo-Amigo-Secreto#readme",
+  "devDependencies": {
+    "terser": "^5.38.1"
+  }
+}

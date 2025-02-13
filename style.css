@@ -46,7 +46,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 1.25rem;
     width: 100%;
 }
 
@@ -74,7 +74,7 @@ body {
     justify-content: center;
     width: 100%;
     max-width: 600px;
-    margin-top: 20px;
+    margin-top: 1.25rem;
     flex-wrap: wrap;
 }
 
@@ -90,7 +90,7 @@ body {
 .button-container {
     display: flex; 
     justify-content: center; 
-    margin-top: 20px; 
+    margin-top: 1.25rem; 
     flex-wrap: wrap;
 }
 
@@ -107,13 +107,10 @@ body {
     background-color: var(--color-tertiary);
     color: var(--color-text);
     border-radius: 25px; /* Arredonda todos os lados */
-    border-top-left-radius: 25px; /* Arredonda o canto superior esquerdo */
-    border-top-right-radius: 25px; /* Arredonda o canto superior direito */
-    border-bottom-left-radius: 25px; /* Arredonda o canto inferior esquerdo */
-    border-bottom-right-radius: 25px; /* Arredonda o canto inferior direito */
     padding: 10px 20px; /* Ajuste o padding conforme necessário */
     cursor: pointer; /* Muda o cursor para indicar que é clicável */
 }
+
 .button-draw {
     background-color: var(--color-button);
     color: var(--color-white);
@@ -132,16 +129,9 @@ ul {
     margin: 20px 0;
 }
 
-/* Para telas de até 1024px */
 @media (max-width: 1024px) {
     .main-title {
         font-size: 1.8rem; /* Ajuste o tamanho da fonte */
-    }
-    .section-title {
-        font-size: 1.6rem; /* Ajuste o tamanho da fonte */
-    }
-    .input-name {
-        font-size: 0.9rem; /* Ajuste o tamanho da fonte */
     }
 }
 
@@ -150,29 +140,67 @@ ul {
     .main-title {
         font-size: 1.6rem; /* Ajuste o tamanho da fonte */
     }
-    .section-title {
+}
+
+/* Para telas de até 590px */
+@media (max-width: 590px) {
+    .main-title {
         font-size: 1.4rem; /* Ajuste o tamanho da fonte */
-    }
-    .input-name {
-        font-size: 0.8rem; /* Ajuste o tamanho da fonte */
-    }
-    .button-container button {
-        width: 100%; /* Botões ocupam toda a largura */
     }
 }
 
 /* Para telas de até 480px */
 @media (max-width: 480px) {
     .main-title {
+        font-size: 1.2rem; /* Ajuste o tamanho da fonte */
+    }
+}
+
+/* Para telas de até 320px */
+@media (max-width: 320px) {
+    .main-title {
+        font-size: 1rem; /* Ajuste o tamanho da fonte */
+    }
+}
+
+/* Estilos para o título "Digite um Nome" */
+.section-title {
+    font-family: "Inter", serif;
+    font-size: 2.125rem; /* Tamanho base */
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 10px 0;
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Media Queries para "Digite um Nome" */
+@media (max-width: 1024px) {
+    .section-title {
+        font-size: 1.8rem; /* Ajuste o tamanho da fonte */
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.6rem; /* Ajuste o tamanho da fonte */
+    }
+}
+
+@media (max-width: 590px) {
+    .section-title {
         font-size: 1.4rem; /* Ajuste o tamanho da fonte */
     }
+}
+
+@media (max-width: 480px) {
     .section-title {
         font-size: 1.2rem; /* Ajuste o tamanho da fonte */
     }
-    .input-name {
-        margin-bottom: 10px; /* Adiciona espaço entre os inputs */
-    }
-    .button-container button {
-        margin: 5px 0; /* Ajusta o espaço entre os botões */
+}
+
+/* Para telas de até 320px */
+@media (max-width: 320px) {
+    .main-title {
+        font-size: 1rem; /* Ajuste o tamanho da fonte */
     }
 }

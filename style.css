@@ -3,13 +3,12 @@
     --color-secondary: #FFF9EB;
     --color-tertiary: #C4C4C4;
     --color-button: #fe652b;
-    --color-button-hover: #fe652b; /* Esta pode ser mantida ou alterada */
-    --color-button-hover-green: #28a745; /* Adicionada a cor verde */
-    --color-text: #444444;
+    --color-button-hover: #fe652b; 
+    --color-button-hover-green: #28a745; 
+    --color-text: #000000;
     --color-white: #FFFFFF;
 }
 
-/* Estilos gerais */
 * {
     margin: 0;
     padding: 0;
@@ -31,16 +30,14 @@ body {
     width: 100%;
 }
 
-/* Banner */
 .header-banner {
-    flex: 40%;
+    flex: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 40px 0 0;
 }
 
-/* Seção de entrada */
 .input-section {
     flex: 60%;
     background-color: var(--color-secondary);
@@ -53,9 +50,8 @@ body {
     width: 100%;
 }
 
-/* Títulos */
 .main-title {
-    font-size: 48px;
+    font-size: 3rem;
     font-family: "Merriweather", serif;
     font-weight: 900;
     font-style: italic;
@@ -64,14 +60,13 @@ body {
 
 .section-title {
     font-family: "Inter", serif;
-    font-size: 36px;
+    font-size: 2.125rem;
     font-weight: 700;
     color: var(--color-primary);
     margin: 10px 0;
     text-align: center;
 }
 
-/* Contêineres de entrada e botão */
 .input-wrapper {
     display: flex;
     justify-content: center;
@@ -85,24 +80,23 @@ body {
     padding: 10px;
     border: 2px solid #000;
     border-radius: 25px 0 0 25px;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .button-container {
-    display: flex; /* Ativa o Flexbox */
-    justify-content: center; /* Centraliza horizontalmente */
-    margin-top: 20px; /* Adiciona um espaço acima do botão, se necessário */
+    display: flex; 
+    justify-content: center; 
+    margin-top: 20px; 
 }
 
 .button-container button {
-    margin: 0 10px; /* Adiciona um espaço entre os botões, se houver mais de um */
-}
+    margin: 0 10px; 
 
-/* Estilos de entrada de texto */
+}
 .input-title {
     flex: 1;
     padding: 10px 15px;
-    font-size: 16px;
+    font-size: 1rem;
     border: 2px solid #333;
     border-right: none;
     border-radius: 25px 0 0 25px;
@@ -110,11 +104,10 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilos de botão */
 button {
     padding: 15px 30px;
     font-family: "Inter", sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     border: 2px solid #000;
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -127,8 +120,9 @@ button {
     border-radius: 0 25px 25px 0;
 }
 .button-add img {
-    width: 20px; /* Ajuste conforme necessário */
-    height: 20px; /* Ajuste conforme necessário */
+    width: 20px; 
+    height: 20px; 
+
 }
 .button-add:hover {
     background-color: var(--color-button);
@@ -139,11 +133,10 @@ ul {
     list-style-type: none;
     color: var(--color-text);
     font-family: "Inter", sans-serif;
-    font-size: 18px;
+    font-size: 1.125rem;
     margin: 20px 0;
 }
 
-/* Botão de sortear título */
 .button-draw {
     display: flex;
     align-items: center;
@@ -151,15 +144,31 @@ ul {
     padding: 10px 40px;
     color: var(--color-white);
     background-color: var(--color-button);
-    font-size: 16px;
+    font-size: 1rem;
 }
 .button-draw:hover {
-    background-color: var(--color-button-hover-green); /* Cor verde ao passar o mouse */
-    color: #FFFFFF; /* Cor do texto ao passar o mouse */
+    background-color: var(--color-button-hover-green); 
+    color: #FFFFFF; 
 }
 .main-content .result-list {
     margin-top: 15px;
-    color: #05DF05;
+    color: #df0505;
     font-size: 2rem;
-    font-weight: bold; /* Adicionei o valor 'bold' aqui */
+    font-weight: bold; 
+}
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 10%;  
+    }   
+    .cabecalho__menu {
+        justify-content: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+    }
+    
+    .apresentacao__conteudo {
+        width: auto;
+    }
 }

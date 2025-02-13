@@ -6,7 +6,7 @@
     --color-button-hover: #fe652b; 
     --color-button-hover-green: #28a745; 
     --color-text: #000000;
-    --color-white: #FFFFFF;
+    --color-black: #000000;
 }
 
 * {
@@ -50,14 +50,6 @@ body {
     width: 100%;
 }
 
-.main-title {
-    font-size: 3rem;
-    font-family: "Merriweather", serif;
-    font-weight: 900;
-    font-style: italic;
-    color: var(--color-white);
-}
-
 .section-title {
     font-family: "Inter", serif;
     font-size: 2.125rem;
@@ -67,66 +59,69 @@ body {
     text-align: center;
 }
 
+.main-title {
+    font-size: 2rem;
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--color-black);
+    text-align: center; /* Centraliza o texto */
+    margin: 20px 0; /* Ajusta a margem se necessário */
+}
+
 .input-wrapper {
     display: flex;
     justify-content: center;
     width: 100%;
     max-width: 600px;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .input-name {
     width: 100%;
     padding: 10px;
     border: 2px solid #000;
-    border-radius: 25px 0 0 25px;
+    border-radius: 25px; /* Arredonda todos os lados */
     font-size: 1rem;
+    margin-bottom: 10px;
 }
 
 .button-container {
     display: flex; 
     justify-content: center; 
     margin-top: 20px; 
+    flex-wrap: wrap;
 }
 
 .button-container button {
-    margin: 0 10px; 
-
-}
-.input-title {
-    flex: 1;
-    padding: 10px 15px;
-    font-size: 1rem;
-    border: 2px solid #333;
-    border-right: none;
-    border-radius: 25px 0 0 25px;
-    font-family: "Merriweather", serif;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-button {
-    padding: 15px 30px;
-    font-family: "Inter", sans-serif;
-    font-size: 1rem;
-    border: 2px solid #000;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
+    margin: 5px; /* Ajusta o espaço entre os botões */
+    width: 100%; /* Faz com que os botões ocupem toda a largura do contêiner */
+    max-width: 200px; /* Define uma largura máxima para os botões */
+    border-radius: 25px; /* Arredonda todos os lados dos botões */
+    padding: 10px 20px; /* Ajuste o padding conforme necessário */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
 }
 
 .button-add {
     background-color: var(--color-tertiary);
     color: var(--color-text);
-    border-radius: 0 25px 25px 0;
+    border-radius: 25px; /* Arredonda todos os lados */
+    border-top-left-radius: 25px; /* Arredonda o canto superior esquerdo */
+    border-top-right-radius: 25px; /* Arredonda o canto superior direito */
+    border-bottom-left-radius: 25px; /* Arredonda o canto inferior esquerdo */
+    border-bottom-right-radius: 25px; /* Arredonda o canto inferior direito */
+    padding: 10px 20px; /* Ajuste o padding conforme necessário */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
 }
-.button-add img {
-    width: 20px; 
-    height: 20px; 
-
-}
-.button-add:hover {
+.button-draw {
     background-color: var(--color-button);
-    color: #FFFFFF;
+    color: var(--color-white);
+}
+
+.button-draw:hover {
+    background-color: var(--color-button-hover-green); 
+    color: #FFFFFF; 
 }
 
 ul {
@@ -137,38 +132,47 @@ ul {
     margin: 20px 0;
 }
 
-.button-draw {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 10px 40px;
-    color: var(--color-white);
-    background-color: var(--color-button);
-    font-size: 1rem;
-}
-.button-draw:hover {
-    background-color: var(--color-button-hover-green); 
-    color: #FFFFFF; 
-}
-.main-content .result-list {
-    margin-top: 15px;
-    color: #df0505;
-    font-size: 2rem;
-    font-weight: bold; 
-}
-@media (max-width: 1200px) {
-    .cabecalho {
-        padding: 10%;  
-    }   
-    .cabecalho__menu {
-        justify-content: center;
+/* Para telas de até 1024px */
+@media (max-width: 1024px) {
+    .main-title {
+        font-size: 1.8rem; /* Ajuste o tamanho da fonte */
     }
+    .section-title {
+        font-size: 1.6rem; /* Ajuste o tamanho da fonte */
+    }
+    .input-name {
+        font-size: 0.9rem; /* Ajuste o tamanho da fonte */
+    }
+}
 
-    .apresentacao {
-        flex-direction: column-reverse;
+/* Para telas de até 768px */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 1.6rem; /* Ajuste o tamanho da fonte */
     }
-    
-    .apresentacao__conteudo {
-        width: auto;
+    .section-title {
+        font-size: 1.4rem; /* Ajuste o tamanho da fonte */
+    }
+    .input-name {
+        font-size: 0.8rem; /* Ajuste o tamanho da fonte */
+    }
+    .button-container button {
+        width: 100%; /* Botões ocupam toda a largura */
+    }
+}
+
+/* Para telas de até 480px */
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 1.4rem; /* Ajuste o tamanho da fonte */
+    }
+    .section-title {
+        font-size: 1.2rem; /* Ajuste o tamanho da fonte */
+    }
+    .input-name {
+        margin-bottom: 10px; /* Adiciona espaço entre os inputs */
+    }
+    .button-container button {
+        margin: 5px 0; /* Ajusta o espaço entre os botões */
     }
 }

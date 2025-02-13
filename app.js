@@ -30,6 +30,9 @@ function validarAmigo(amigo) {
   if (amigos.includes(amigo)) {
     return "Amigo já adicionado";
   }
+  if (!/^[A-Z]/.test(amigo)) { // Verifica se o primeiro caractere é uma letra maiúscula
+    return "O nome deve iniciar com uma letra maiúscula";
+  }
   return null; // Retorna null se não houver erro
 }
 

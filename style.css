@@ -44,7 +44,7 @@ body {
 }
 
 .main-title {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-family: "Merriweather", serif;
     font-weight: 900;
     font-style: italic;
@@ -137,46 +137,41 @@ ul {
 }
 
 @media (max-width: 1024px) {
-    .main-title {
-        font-size: 1.8rem; 
-    }
-    .section-title {
-        font-size: 1.8rem; 
+    .main-content {
+        padding: 10px; 
+        margin: 0; 
     }
 }
 
-@media (max-width: 768px) {
-    .main-title {
-        font-size: 1.6rem; 
-    }
-    .section-title {
-        font-size: 1.6rem; 
+@media (max-width: 780px) {
+    .main-content {
+        padding: 10px; 
+        margin: 0; 
     }
 }
 
 @media (max-width: 580px) {
-    .main-title {
-        font-size: 1.2rem; 
-    }
-    .section-title {
-        font-size: 1.2rem; 
-    }
-}
-
-@media (max-width: 480px) {
-    .main-title {
-        font-size: 1.0rem; 
-    }
-    .section-title {
-        font-size: 1.0rem; 
+    .main-content {
+        padding: 10px; 
+        margin: 0; 
     }
 }
 
 @media (max-width: 380px) {
+    .main-content {
+        padding: 10px; 
+        margin: 0; 
+    }
+}
+
+@media (max-width: 290px) {
     .main-title {
-        font-size: 0.75rem; 
+        font-size: 1.5rem; 
     }
     .section-title {
-        font-size: 0.75rem; 
+        font-size: 1.5rem; 
+    }
+    .input-name {
+        font-size: 0.9rem; 
     }
 }

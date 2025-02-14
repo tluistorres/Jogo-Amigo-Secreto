@@ -7,6 +7,7 @@
     --color-button-hover-green: #28a745; 
     --color-text: #000000;
     --color-black: #000000;
+    --color-white: #FFFFFF; /* Adicionando a variável de cor branca */
 }
 
 * {
@@ -16,30 +17,44 @@
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--color-primary);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
 }
 
 .main-content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
+    display: flex; 
+    flex-direction: column; 
+    max-width: 1200px; 
+    width: 100%; 
+    margin: 0 auto; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    flex: 1;
 }
 
 .header-banner {
-    flex: 50%;
+    flex: 0 1 auto;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: 40px 0 0;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+.main-title {
+    font-size: 1.5rem;
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--color-black);
+    margin: 30px 0; 
+    margin-left: 20px; 
 }
 
 .input-section {
-    flex: 60%;
+    flex: 1; 
     background-color: var(--color-secondary);
     border: 1px solid #000;
     border-radius: 64px 64px 0 0;
@@ -47,7 +62,9 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 1.25rem;
-    width: 100%;
+    width: 100%; /* Garante que a largura ocupe 100% do contêiner pai */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    margin: 0; /* Remove margens laterais */
 }
 
 .section-title {
@@ -57,16 +74,6 @@ body {
     color: var(--color-primary);
     margin: 10px 0;
     text-align: center;
-}
-
-.main-title {
-    font-size: 2rem;
-    font-family: "Merriweather", serif;
-    font-weight: 900;
-    font-style: italic;
-    color: var(--color-black);
-    text-align: center; /* Centraliza o texto */
-    margin: 20px 0; /* Ajusta a margem se necessário */
 }
 
 .input-wrapper {
@@ -82,7 +89,7 @@ body {
     width: 100%;
     padding: 10px;
     border: 2px solid #000;
-    border-radius: 25px; /* Arredonda todos os lados */
+    border-radius: 25px; 
     font-size: 1rem;
     margin-bottom: 10px;
 }
@@ -95,20 +102,20 @@ body {
 }
 
 .button-container button {
-    margin: 5px; /* Ajusta o espaço entre os botões */
-    width: 100%; /* Faz com que os botões ocupem toda a largura do contêiner */
-    max-width: 200px; /* Define uma largura máxima para os botões */
-    border-radius: 25px; /* Arredonda todos os lados dos botões */
-    padding: 10px 20px; /* Ajuste o padding conforme necessário */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    margin: 5px; 
+    width: 100%; 
+    max-width: 200px; 
+    border-radius: 25px; 
+    padding: 10px 20px; 
+    cursor: pointer; 
 }
 
 .button-add {
     background-color: var(--color-tertiary);
     color: var(--color-text);
-    border-radius: 25px; /* Arredonda todos os lados */
-    padding: 10px 20px; /* Ajuste o padding conforme necessário */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    border-radius: 25px; 
+    padding: 10px 20px; 
+    cursor: pointer; 
 }
 
 .button-draw {
@@ -131,76 +138,45 @@ ul {
 
 @media (max-width: 1024px) {
     .main-title {
-        font-size: 1.8rem; /* Ajuste o tamanho da fonte */
+        font-size: 1.8rem; 
     }
-}
-
-/* Para telas de até 768px */
-@media (max-width: 768px) {
-    .main-title {
-        font-size: 1.6rem; /* Ajuste o tamanho da fonte */
-    }
-}
-
-/* Para telas de até 590px */
-@media (max-width: 590px) {
-    .main-title {
-        font-size: 1.4rem; /* Ajuste o tamanho da fonte */
-    }
-}
-
-/* Para telas de até 480px */
-@media (max-width: 480px) {
-    .main-title {
-        font-size: 1.2rem; /* Ajuste o tamanho da fonte */
-    }
-}
-
-/* Para telas de até 320px */
-@media (max-width: 320px) {
-    .main-title {
-        font-size: 1rem; /* Ajuste o tamanho da fonte */
-    }
-}
-
-/* Estilos para o título "Digite um Nome" */
-.section-title {
-    font-family: "Inter", serif;
-    font-size: 2.125rem; /* Tamanho base */
-    font-weight: 700;
-    color: var(--color-primary);
-    margin: 10px 0;
-    text-align: center; /* Centraliza o texto */
-}
-
-/* Media Queries para "Digite um Nome" */
-@media (max-width: 1024px) {
     .section-title {
-        font-size: 1.8rem; /* Ajuste o tamanho da fonte */
+        font-size: 1.8rem; 
     }
 }
 
 @media (max-width: 768px) {
+    .main-title {
+        font-size: 1.6rem; 
+    }
     .section-title {
-        font-size: 1.6rem; /* Ajuste o tamanho da fonte */
+        font-size: 1.6rem; 
     }
 }
 
-@media (max-width: 590px) {
+@media (max-width: 580px) {
+    .main-title {
+        font-size: 1.2rem; 
+    }
     .section-title {
-        font-size: 1.4rem; /* Ajuste o tamanho da fonte */
+        font-size: 1.2rem; 
     }
 }
 
 @media (max-width: 480px) {
+    .main-title {
+        font-size: 1.0rem; 
+    }
     .section-title {
-        font-size: 1.2rem; /* Ajuste o tamanho da fonte */
+        font-size: 1.0rem; 
     }
 }
 
-/* Para telas de até 320px */
-@media (max-width: 320px) {
+@media (max-width: 380px) {
     .main-title {
-        font-size: 1rem; /* Ajuste o tamanho da fonte */
+        font-size: 0.75rem; 
+    }
+    .section-title {
+        font-size: 0.75rem; 
     }
 }

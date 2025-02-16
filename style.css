@@ -1,13 +1,11 @@
 :root {
-    --color-primary: #4B69FD;
+    --color-primary: #597445;
     --color-secondary: #FFF9EB;
-    --color-tertiary: #C4C4C4;
-    --color-button: #fe652b;
-    --color-button-hover: #fe652b; 
-    --color-button-hover-green: #28a745; 
+    --color-tertiary: #FF6000;
+    --color-button: #FF6000;
+    --color-button-hover: #FF6000; 
     --color-text: #000000;
-    --color-black: #000000;
-    --color-white: #FFFFFF; /* Adicionando a variável de cor branca */
+
 }
 
 * {
@@ -44,7 +42,7 @@ body {
 }
 
 .main-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-family: "Merriweather", serif;
     font-weight: 900;
     font-style: italic;
@@ -62,16 +60,16 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 1.25rem;
-    width: 100%; /* Garante que a largura ocupe 100% do contêiner pai */
-    height: auto; /* Permite que a altura se ajuste ao conteúdo */
-    margin: 0; /* Remove margens laterais */
+    width: 100%; 
+    height: auto; 
+    margin: 0; 
 }
 
 .section-title {
     font-family: "Inter", serif;
-    font-size: 2.125rem;
+    font-size: 2rem;
     font-weight: 700;
-    color: var(--color-primary);
+    color: var(--color-text);
     margin: 10px 0;
     text-align: center;
 }
@@ -112,19 +110,19 @@ body {
 
 .button-add {
     background-color: var(--color-tertiary);
-    color: var(--color-text);
+    color: var(--color-secondary);
     border-radius: 25px; 
     padding: 10px 20px; 
     cursor: pointer; 
 }
 
 .button-draw {
-    background-color: var(--color-button);
+    background-color: var(--color-tertiary);
     color: var(--color-white);
 }
 
 .button-draw:hover {
-    background-color: var(--color-button-hover-green); 
+    background-color: var(--color-tertiary); 
     color: #FFFFFF; 
 }
 
@@ -132,7 +130,7 @@ ul {
     list-style-type: none;
     color: var(--color-text);
     font-family: "Inter", sans-serif;
-    font-size: 1.125rem;
+    font-size: 1.0rem;
     margin: 20px 0;
 }
 

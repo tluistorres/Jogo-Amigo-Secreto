@@ -1,5 +1,5 @@
 const amigosOriginais = [];
-const amigos = []; // Começa com a lista vazia
+const amigos = []; 
 const eAmigoInput = document.querySelector("#amigo");
 const eBotaoAdicionar = document.getElementById('adicionarNome');
 const eAmigoList = document.querySelector("#listaNomes");
@@ -18,9 +18,9 @@ function adicionarAmigo() {
     mostrarMensagemErro(mensagemErro);
     return;
   }
-  amigos.push(amigo); // Adiciona o amigo ao array
-  atualizarListaAmigos(); // Atualiza a lista na interface
-  eAmigoInput.value = ""; // Limpa o campo de entrada
+  amigos.push(amigo); 
+  atualizarListaAmigos(); 
+  eAmigoInput.value = ""; 
 }
 
 function validarAmigo(amigo) {
@@ -30,14 +30,14 @@ function validarAmigo(amigo) {
   if (amigos.includes(amigo)) {
     return "Amigo já adicionado";
   }
-  if (!/^[A-Z]/.test(amigo)) { // Verifica se o primeiro caractere é uma letra maiúscula
+  if (!/^[A-Z]/.test(amigo)) { 
     return "O nome deve iniciar com uma letra maiúscula";
   }
-  return null; // Retorna null se não houver erro
+  return null; 
 }
 
 function mostrarMensagemErro(mensagem) {
-  window.alert(mensagem); // Você pode substituir por um elemento na interface
+  window.alert(mensagem); 
 }
 
 function sortearAmigo() {
@@ -45,33 +45,35 @@ function sortearAmigo() {
     window.alert("Adicione ao menos um amigo antes de sortear.");
     return;
   }
-  const randIndex = Math.floor(Math.random() * amigos.length);
-  const resultadoAmigo = amigos[randIndex]; // Seleciona um amigo aleatório
-  const resultadoMessage = `<span style="color: #05DF05; font-weight: bold;">Parabéns! O sorteado foi ${resultadoAmigo}.</span>`; // Mensagem de resultado
-  eAmigoResultado.innerHTML = resultadoMessage; // Exibe o resultado na tela com HTML
 
-  // Adiciona um atraso antes de mostrar os confetes
+  const randIndex = Math.floor(Math.random() * amigos.length);
+  const resultadoAmigo = amigos[randIndex]; 
+  const resultadoMessage = `<span style="color: #FF6000; font-weight: bold;">Parabéns! O sorteado foi ${resultadoAmigo}.</span>`; 
+  eAmigoResultado.innerHTML = resultadoMessage; 
+
+  amigos.splice(randIndex, 1);
+  atualizarListaAmigos();
+  
   setTimeout(() => {
     confetti({
       particleCount: 100,
       spread: 70,
       origin: { y: 0.6 }
     });
-  }, 1000); // Atraso de 1000 milissegundos (1 segundo)
+  }, 1000); 
 }
 
-// Funções auxiliares
 function limparLista() {
-  amigos.length = 0; // Limpa o array de amigos
-  atualizarListaAmigos(); // Atualiza a interface para refletir a lista vazia
-  eAmigoResultado.textContent = ""; // Limpa o resultado exibido
+  amigos.length = 0; 
+  atualizarListaAmigos(); 
+  eAmigoResultado.textContent = ""; 
 }
 
 function atualizarListaAmigos() {
-  eAmigoList.innerHTML = ""; // Limpa a lista exibida
+  eAmigoList.innerHTML = ""; 
   amigos.forEach((amigo) => {
     const li = document.createElement("li");
-    li.textContent = amigo; // Adiciona o nome do amigo à lista
-    eAmigoList.appendChild(li); // Adiciona o item à lista no HTML
+    li.textContent = amigo; 
+    eAmigoList.appendChild(li); 
   });
 }
